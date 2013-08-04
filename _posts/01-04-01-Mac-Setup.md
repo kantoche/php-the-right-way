@@ -2,19 +2,17 @@
 isChild: true
 ---
 
-## Mac Setup  {#mac_setup_title}
+## Installation sur Mac  {#mac_setup_title}
 
-OSX comes prepackaged with PHP but it is normally a little behind the latest stable. Lion comes with PHP 5.3.6 and
-Mountain Lion has 5.3.10.
+OSX est fourni par défaut avec une version de PHP déjà installée, mais qui est normalement un peu en retard par rapport à la dernière version stable. Lion embarque PHP 5.3.6 et
+Mountain Lion dispose de la version 5.3.10.
 
-To update PHP on OSX you can get it installed through a number of Mac [package managers][mac-package-managers], with
-[php-osx by Liip][php-osx-downloads] being recommended.
+Pour mettre à jour PHP sur OSX, vous pouvez utiliser l'un des nombreux [gestionnaires de paquetages][mac-package-managers] disponibles pour Mac, avec une préférence pour [php-osx de Liip][php-osx-downloads].
 
-The other option is to [compile it yourself][mac-compile], in that case be sure to have installed either Xcode or
+L'autre option est de [le compiler vous-même][mac-compile], et dans ce cas assurez-vous d'avoir installé soit Xcode soit  
 Apple's substitute ["Command Line Tools for Xcode"][apple-developer] downloadable from Apple's Mac Developer Center.
 
-For a complete "all-in-one" package including PHP, Apache web server and MySQL database, all this with a nice control
-GUI, try [MAMP][mamp-downloads].
+Pour un paquetage tout-en-un incluant PHP, le serveur web Apache et la base de données MySQL, all this with a nice control GUI, essayez [MAMP][mamp-downloads].
 
 [mac-package-managers]: http://www.php.net/manual/en/install.macosx.packages.php
 [mac-compile]: http://www.php.net/manual/en/install.macosx.compile.php
