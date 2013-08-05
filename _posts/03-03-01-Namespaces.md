@@ -2,18 +2,18 @@
 isChild: true
 ---
 
-## Namespaces {#namespaces_title}
+## Espaces de nom {#namespaces_title}
 
-As mentioned above, the PHP community has a lot of developers creating lots of code. This means that one library's PHP code may use the same class name as another library. When both libraries are used in the same namespace, they collide and cause trouble.
+Comme mentionné ci-dessus, la communauté PHP compte de nombreux développeurs, producteurs de codes. has a lot of developers creating lots of code. Cela signifie qu'une bibliothèque de code PHP peut utiliser le même nom de classe qu'une autre bibliothèque. Quand les deux bibliothèques sont utilisées dans le même espace de nom, elles entrent en collision et posent problème.
 
-_Namespaces_ solve this problem. As described in the PHP reference manual, namespaces may be compared to operating system directories that _namespace_ files; two files with the same name may co-exist in separate directories. Likewise, two PHP classes with the same name may co-exist in separate PHP namespaces. It's as simple as that.
+_Les espaces de noms_ résolvent ce problème. Comme il est décrit dans le manuel de référence PHP, les espaces de nom peuvent être comparés, dans un système de fichiers, aux dossiers qui _donnent un nom_ aux fichiers; deux fichiers avec le même nom peuvent co-exister dans deux dossiers distincts. De la même façon, deux classes PHP avec le même nom peuvent co-exister dans deux espaces de nom PHP distincts. C'est aussi simple que cela.
 
-It is important for you to namespace your code so that it may be used by other developers without fear of colliding with other libraries.
+Il est important pour vous d'attribuer un espace de nom à votre code afin qu'il puisse être utilisé par d'autres développeurs sans crainte de collision avec d'autres bibliothèques.
 
-One recommended way to use namespaces is outlined in [PSR-0][psr0], which aims to provide a standard file, class and namespace convention to allow plug-and-play code.
+Il est recommandé d'utiliser les espaces de nom tel qu'indiqué dans [PSR-0][psr0], qui vise à fournir un standard d'usage des fichier, classe et espace de nom pour permettre un code prêt à l'emploi.
 
-* [Read about Namespaces][namespaces]
-* [Read about PSR-0][psr0]
+* [A propos des espaces de nom][namespaces]
+* [A propos de PSR-0][psr0]
 
-[namespaces]: http://php.net/manual/en/language.namespaces.php
+[namespaces]: http://php.net/manual/fr/language.namespaces.php
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
