@@ -1,10 +1,10 @@
-# Dependency Management {#dependency_management_title}
+# Gestion des dépendances {#dependency_management_title}
 
-There are a ton of PHP libraries, frameworks, and components to choose from. Your project will likely use several of them — these are project dependencies. Until recently, PHP did not have a good way to manage these project dependencies. Even if you managed them manually, you still had to worry about autoloaders. No more.
+Il existe au choix des tonnes de bibliothèques PHP, de cadres de travail, et de composants. Votre projet aura certainement recours à plusieurs d'entre eux - ce sont les dépendances du projet. Jusqu'à recemment, PHP ne disposait pas d'un moyen efficace pour gérer ces dépendances de projet. Même si vous vous en occupiez à la main, vous deviez encore batailler avec le chargement automatique des classes. Plus maintenant.
 
-Currently there are two major package management systems for PHP - Composer and PEAR. Which one is right for you? The answer is both.
+Il y a désormais deux systèmes majeurs de gestion de paquetages pour PHP - Composer et PEAR. Lequel vous convient le mieux ? La réponse est double
 
- * Use **Composer** when managing dependencies for a single project.
- * Use **PEAR** when managing dependencies for PHP as a whole on your system.
+ * Utilisez **Composer** lorsque vous gérez les dépendances d'un unique projet.
+ * Utilisez **PEAR** lorsque vous gérez les dépendances de PHP dans leur ensemble sur votre système.
 
-In general, Composer packages will be available only in the projects that you explicitly specify whereas a PEAR package would be available to all of your PHP projects. While PEAR might sound like the easier approach at first glance, there are advantages to using a project-by-project approach to your dependencies.
+En général, les paquetages de Composer ne seront disponibles que dans les projets que vous spécifiez explicitement, tandis qu'un paquetage PEAR serait disponible pour tous vos projets PHP. Bien que PEAR pourrait sembler être l'approche la plus simple au premier coup d'oeil, il y a des avantages à utiliser une approche projet par projet pour vos dépendances.
