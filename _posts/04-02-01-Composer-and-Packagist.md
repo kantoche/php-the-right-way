@@ -66,7 +66,7 @@ Cela est des plus utile lorsque vous définissez la flexibilité des exigences d
 
 Le [Security Advisories Checker][3] est un service web et un outil en ligne de commande qui examinent votre fichier `composer.lock` et vous signalent la nécessité de mettre à jour si besoin l'une de vos dépendances.
 
-* [A propos de Composer][4]
+* [En savoir plus sur Composer][4]
 
 [1]: http://packagist.org/
 [2]: http://twig.sensiolabs.org
