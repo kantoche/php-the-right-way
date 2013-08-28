@@ -14,37 +14,29 @@ En guise de note supplémentaire sur les pilotes intégrés, l'extension mysql p
 
 ## PDO
 
-PDO is a database connection abstraction library &mdash;  built into PHP since 5.1.0 &mdash; that provides a common interface to talk with
-many different databases. PDO will not translate your SQL queries or emulate missing features; it is purely for connecting to multiple types
-of database with the same API.
+PDO est une bibliothèque d'abstraction de connexion aux bases de données &mdash; intégrée à PHP depuis la version 5.1.0 &mdash; qui fournit une interface commune pour communiquer avec de nombreuses bases différentes. PDO ne traduira pas vos requêtes SQL ni n'émulera les fonctionnalités manquantes; Elle est purement dédiée à la connexion avec des types multiples de bases de données au moyen de la même API.
 
-More importantly, `PDO` allows you to safely inject foreign input (e.g. IDs) into your SQL queries without worrying about database SQL injection attacks.
-This is possible using PDO statements and bound parameters.
+Plus important, `PDO` vous permet d'injecter en toute sécurité des données étrangères (e.g. IDs) dans vos requêtes SQL sans vous soucier des attaques d'injection SQL. Cela est possible grâce aux expressions PDO et aux paramètres liés.
 
-Let's assume a PHP script receives a numeric ID as a query parameter. This ID should be used to fetch a user record from a database. This is the `wrong`
-way to do this:
+Imaginons qu'un script PHP reçoive un ID numérique comme paramètre de requête. Cet ID devrait être utilisé pour récupérer un enregistrement dans la base. Voici la `mauvaise` manière de procéder :
 
 {% highlight php %}
 <?php
 $pdo = new PDO('sqlite:users.db');
-$pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
+$pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NON !
 {% endhighlight %}
 
-This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a
-heartbeat. Just imagine if a hacker passes in an inventive `id` parameter by calling a URL like
-`http://domain.com/?id=1%3BDELETE+FROM+users`.  This will set the `$_GET['id']` variable to `1;DELETE FROM users`
-which will delete all of your users! Instead, you should sanitize the ID input using PDO bound parameters.
+Ce code est horrible. Vous insérez un paramètre de requête brut dans votre requête SQL. Vous allez vous faire pirater en un battement de paupière. Imaginez simplement qu'un pirate transmette un paramètre `id` factice en appelant un URL comme `http://domain.com/?id=1%3BDELETE+FROM+users`. La variable `$_GET['id']` se voit alors attribuer la valeur `1;DELETE FROM users` dont le résultat est la suppression de tous vos utilisateurs ! A la place, vous devez nettoyer la donnée ID au moyen des paramètres liés de PDO. 
 
 {% highlight php %}
 <?php
 $pdo = new PDO('sqlite:users.db');
 $stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
-$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); //<-- Automatically sanitized by PDO
+$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); //<-- nettoyage automatique par PDO
 $stmt->execute();
 {% endhighlight %}
 
-This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign input ID before it is introduced to the
-database preventing potential SQL injection attacks.
+Voilà le code correct. Il utilise un paramètre lié dans une expression PDO. It uses a bound parameter on a PDO statement. La donnée ID étrangère est échappée avant son introduction dans la base de données, prévenant ainsi toute attaque potentielle d'injection SQL.
 
 * [Learn about PDO][1]
 
