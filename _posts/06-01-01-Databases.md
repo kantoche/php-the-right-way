@@ -2,21 +2,15 @@
 title: Databases
 ---
 
-# Databases {#databases_title}
+# Bases de données {#databases_title}
 
-Many times your PHP code will use a database to persist information. You have a few options to connect and interact
-with your database. The recommended option _until PHP 5.1.0_ was to use native drivers such as [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], etc.
+A de nombreuses reprises votre code PHP utilisera une base de données pour assurer la persistance de l'information. Vous avez quelques options pour vous connecter et interagir avec votre base de données. L'option recommandée _jusqu'à PHP 5.1.0_ était l'utilisation des pilotes intégrés tels que [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], etc.
 
-Native drivers are great if you are only using ONE database in your application, but if, for example, you are using MySQL and a little bit of MSSQL,
-or you need to connect to an Oracle database, then you will not be able to use the same drivers. You'll need to learn a brand new API for each
-database &mdash; and that can get silly.
+Les pilotes intégrés sont formidables si vous utilisez seulement UNE base de données dans votre application, mais si, par exemple, vous avez besoin de MySQL et d'un peu de MSSQL, ou d'une connexion à une base Oracle, alors vous ne serez pas en mesure d'utiliser les mêmes pilotes. Vous aurez besoin d'apprendre une nouvelle API propriétaire pour chaque base de données &mdash; et cela peut tourner à l'absurde.
 
-As an extra note on native drivers, the mysql extension for PHP is no longer in active development, and the official status since PHP 5.4.0 is
-"Long term deprecation". This means it will be removed within the next few releases, so by PHP 5.6 (or whatever comes after 5.5) it may well be gone. If you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite at some point down the
-line, so the best option is to replace mysql usage with mysqli or PDO in your applications within your own development schedules so you won't
-be rushed later on. _If you are starting from scratch then absolutely do not use the mysql extension: use the [MySQLi extension][mysqli], or use PDO._
+En guise de note supplémentaire sur les pilotes intégrés, l'extension mysql pour PHP n'est plus désormais en développement actif, et son statut officiel depuis PHP 5.4.0 est "Long term deprecation". Cela signifie qu'elle sera supprimée lors d'une prochaine mise à jour, et qu'elle pourrait très bien être retirée avec PHP 5.6 (ou n'importe quelle version qui viendra après la 5.5.) Si vous utilisez `mysql_connect()` et `mysql_query()` dans vos applications, alors vous serez confrontés à une réécriture de code un peu plus tard, si bien que la meilleure option est de prévoir dès à présent dans votre planning de développement le remplacement de mysql par mysqli ou PDO dans vos applications, pour éviter de tomber dans l'urgence au dernier moment. _Si vous partez de zéro, vous devez absolument éviter l'extension mysql : utilisez l'[extension MySQLi][mysqli], ou bien PDO._
 
-* [PHP: Choosing an API for MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
+* [PHP : choisir une API pour MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
 
 ## PDO
 
