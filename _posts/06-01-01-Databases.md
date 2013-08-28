@@ -46,16 +46,13 @@ can implicitly close the connection by destroying the object by ensuring all rem
 i.e. set to NULL.  If you don't do this explicitly, PHP will automatically close the connection when your script ends -
 unless of course you are using persistent connections.
 
-* [Learn about PDO connections][5]
+* [A propos des connexions PDO][5]
 
-## Abstraction Layers
+## Couches d'abstraction
 
-Many frameworks provide their own abstraction layer which may or may not sit on top of PDO.  These will often emulate features for
-one database system that another is missing from another by wrapping your queries in PHP methods, giving you actual database abstraction.
-This will of course add a little overhead, but if you are building a portable application that needs to work with MySQL, PostgreSQL and
-SQLite then a little overhead will be worth it the sake of code cleanliness.
+De nombreux cadres de travail fournissent leur propre couche d'abstraction qui peut reposer ou non au-desssus de PDO. Elles émulent souvent des fonctionnalités disponibles pour un système de base de données et manquantes pour un autre, en encapsulant vos requêtes dans des méthodes PHP, ce qui offre une réelle abstraction de la base de données. Cela occasionne bien entendu un peu de surcharge, mais si vous réalisez une application portable qui a besoin de fonctionner avec MySQL, PostgreSQL et SQLite, alors cette petite surcharge vaut bien le bénéfice d'un code propre.
 
-Some abstraction layers have been built using the PSR-0 namespace standard so can be installed in any application you like:
+Certaines couches d'abstraction ont été construites en utilisant le standard des espaces de nom PSR-0 et elles peuvent donc être installées dans n'importe quelle application de votre choix :
 
 * [Aura SQL][6]
 * [Doctrine2 DBAL][2]
