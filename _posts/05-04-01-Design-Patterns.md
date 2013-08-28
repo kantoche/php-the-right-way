@@ -2,15 +2,10 @@
 isChild: true
 ---
 
-## Design Patterns {#design_patterns_title}
+## Modèles de conception {#design_patterns_title}
 
-When you are building your application it is helpful to use common patterns in your code and common patterns for the
-overall structure of your project. Using common patterns is helpful because it makes it much easier to manage your code
-and lets other developers quickly understand how everything fits together.
+Lorsque vous réalisez votre application, il est utile d'utiliser à la fois des modèles communs pour votre code et pour la structure globale de votre projet. Utiliser des modèles communs est  parce que cela permet de faciliter la gestion de votre code et de donner rapidement à comprendre à d'autres développeurs comment les choses s'organisent ensemble.
 
-If you use a framework then most of the higher level code and project structure will be based on that framework, so a
-lot of the pattern decisions are made for you. But it is still up to you to pick out the best patterns to follow in the
-code you build on top of the framework. If, on the other hand, you are not using a framework to build your application
-then you have to find the patterns that best suit the type and size of application that you're building.
+Si vous utiliser un cadre de travail, alors la structure du projet et la majorité du code de haut niveau reposeront sur ce cadre de travail, si bien qu'un grand nombre de choix de modèles est déjà fait pour vous. Mais il vous reste encore à déterminer quels sont les meilleurs modèles à appliquer pour développer à partir de ce cadre. Si, d'un autre côté, vous n'utilisez pas de cadre de travail pour construire votre application, alors vous devez trouver les modèles qui conviennent le mieux au type et au dimensionnement de l'application que vous réalisez.
 
-* Continue reading on [Design Patterns](/pages/Design-Patterns.html)
+* Continue reading on [modèles de conception](/pages/Design-Patterns.html)
