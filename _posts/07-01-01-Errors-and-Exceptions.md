@@ -2,5 +2,5 @@
 title: Errors and Exceptions
 ---
 
-# Errors and Exceptions {#errors_and_exceptions_title}
+# Erreurs et exceptions {#errors_and_exceptions_title}
 
