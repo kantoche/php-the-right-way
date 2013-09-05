@@ -2,67 +2,45 @@
 isChild: true
 ---
 
-## Data Filtering {#data_filtering_title}
+## Filtrage des données {#data_filtering_title}
 
-Never ever (ever) trust foreign input introduced to your PHP code. Always sanitize and validate
-foreign input before using it in code. The `filter_var` and `filter_input` functions can sanitize text and validate text formats (e.g.
-email addresses).
+Ne jamais (au grand jamais) faire confiance aux données étrangères introduites dans votre code PHP. Vous devez toujours nettoyer et valider les données étrangères avant de les utiliser dans votre code. Les fonctions `filter_var` et `filter_input` peuvent nettoyer et valider les formats de type texte (e.g. adresses email).
 
-Foreign input can be anything: `$_GET` and `$_POST` form input data, some values in the `$_SERVER`
-superglobal, and the HTTP request body via `fopen('php://input', 'r')`. Remember, foreign input is not
-limited to form data submitted by the user. Uploaded and downloaded files, session values, cookie data,
-and data from third-party web services are foreign input, too.
+Les données étrangères peuvent être n'importe quoi : des données de formulaire `$_GET` et `$_POST`, des valeurs présentes dans la variable superglobale `$_SERVER`, et le corps d'une requête HTTP récupérée via `fopen('php://input', 'r')`. Rappelez-vous, les données étrangères ne sont pas limitées aux données de formulaire soumises par l'utilisateur. Les fichiers téléchargés, les valeurs de session, les données des cookies et les données en provenance de services web tiers sont aussi des données étrangères.
 
-While foreign data can be stored, combined, and accessed later, it is still foreign input. Every
-time you process, output, concatenate, or include data in your code, ask yourself if
-the data is filtered properly and can it be trusted.
+Bien que les données étrangères puissent être stockées, combinées et accédées ultérieurement, elles n'en demeurent pas moins des données étrangères. A chaque fois que vous traitez, affichez, concaténez, ou incluez des données dans votre code, demandez-vous si les données sont filtrées proprement et sont ainsi dignes de confiance.
 
-Data may be _filtered_ differently based on its purpose. For example, when unfiltered foreign input is passed
-into HTML page output, it can execute HTML and JavaScript on your site! This is known as Cross-Site
-Scripting (XSS) and can be a very dangerous attack. One way to avoid XSS is to sanitize all user-generated
-data before outputting it to your page by removing HTML tags with the `strip_tags` function or escaping
-characters with special meaning into their respective HTML entities with the `htmlentities`
-or `htmlspecialchars` functions.
+Les données peuvent être _filtrées_ de manière différente en fonction du besoin. Par exemple, quand une donnée étrangère non filtrée est insérée dans une page HTML, elle peut exécuter un code HTML et JavaScript sur votre site ! Ce comportement est connu sous le nom de Cross-Site Scripting (XSS) et peut constituer une attaque très dangereuse. Une façon d'éviter XSS est de nettoyer tous les données générées par l'utilisateur avant leur affichage dans la page en supprimant les balises HTML au moyen de la fonction `strip_tags` ou en remplaçant les caractères spéciaux par les entités HTML équivalentes au moyen des fonctions `htmlentities` ou `htmlspecialchars`.
 
-Another example is passing options to be executed on the command line. This can be extremely dangerous
-(and is usually a bad idea), but you can use the built-in `escapeshellarg` function to sanitize the executed
-command's arguments.
+Le passage d'options devant être exécutées en ligne de commande constitue un autre exemple. Cela peut être extrémement dangereux (et c'est généralement une mauvaise idée), mais vous disposez d'une fonction intégrée `escapeshellarg` pour nettoyer les arguments de la commande exécutée.
 
-One last example is accepting foreign input to determine a file to load from the filesystem. This can be exploited by
-changing the filename to a file path. You need to remove "/", "../", [null bytes][6], or other characters from the file path so it can't
-load hidden, non-public, or sensitive files.
+Un dernier exemple consiste à accepter des données étrangères pour choisir un fichier à charger à partir du système de fichiers. Cette situation peut être exploitée en changeant le nom du fichier par un chemin de fichier. Vous devez supprimer "/", "../", [les octects nuls][6], ou d'autres caractères du chemin de fichier afin que les fichiers cachés, non publics ou sensibles ne puissent être chargés.
 
-* [Learn about data filtering][1]
-* [Learn about `filter_var`][4]
-* [Learn about `filter_input`][5]
-* [Learn about handling null bytes][6]
+* [A propos du filtrage des données][1]
+* [A propos de `filter_var`][4]
+* [A propos de `filter_input`][5]
+* [A propos de la gestion des octets nuls][6]
 
-### Sanitization
+### Nettoyage
 
-Sanitization removes (or escapes) illegal or unsafe characters from foreign input.
+Le nettoyage supprime (ou échappe) les caractères illégaux ou douteux des données étrangères.
 
-For example, you should sanitize foreign input before including the input in HTML or inserting it
-into a raw SQL query. When you use bound parameters with [PDO](#databases), it will
-sanitize the input for you.
+Par exemple, vous devriez nettoyer les données étrangères avant de les insérer dans une page HTML ou de les injecter dans une requête SQL brute. Quand vous utilisez des paramètres liés avec [PDO](#databases), il fait le travail de nettoyage pour vous.
 
-Sometimes it is required to allow some safe HTML tags in the input when including it in the HTML
-page. This is very hard to do and many avoid it by using other more restricted formatting like
-Markdown or BBCode, although whitelisting libraries like [HTML Purifier][html-purifier] exists for
-this reason.
+Parfois il est nécessaire de permettre l'insertion de balises HTML autorisées lors de l'affichage d'une page HTML. C'est particulièrement délicat à réaliser et beaucoup l'évite en préférant utiliser un formatage plus restrictif comme Markdown ou BBCode, bien qu'il existe des bibliothèques de listes blanches comme [HTML Purifier][html-purifier] pour cette raison.
 
-[See Sanitization Filters][2]
+[Voir les filtres de nettoyage][2]
 
 ### Validation
 
-Validation ensures that foreign input is what you expect. For example, you may want to validate an
-email address, a phone number, or age when processing a registration submission.
+La validation garantit que les données étrangères correspondent à ce que vous attendez. Par exemple, vous pouvez valider une adresse mail, un numéro de téléphone, ou un âge au moment du traitement d'un formulaire d'enregistrement.
 
-[See Validation Filters][3]
+[Voir les filtres de validation][3]
 
-[1]: http://www.php.net/manual/en/book.filter.php
-[2]: http://www.php.net/manual/en/filter.filters.sanitize.php
-[3]: http://www.php.net/manual/en/filter.filters.validate.php
-[4]: http://php.net/manual/en/function.filter-var.php
-[5]: http://www.php.net/manual/en/function.filter-input.php
-[6]: http://php.net/manual/en/security.filesystem.nullbytes.php
+[1]: http://www.php.net/manual/fr/book.filter.php
+[2]: http://www.php.net/manual/fr/filter.filters.sanitize.php
+[3]: http://www.php.net/manual/fr/filter.filters.validate.php
+[4]: http://php.net/manual/fr/function.filter-var.php
+[5]: http://www.php.net/manual/fr/function.filter-input.php
+[6]: http://php.net/manual/fr/security.filesystem.nullbytes.php
 [html-purifier]: http://htmlpurifier.org/
