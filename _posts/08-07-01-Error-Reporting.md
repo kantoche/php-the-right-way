@@ -2,30 +2,24 @@
 isChild: true
 ---
 
-## Error Reporting {#error_reporting_title}
+## Rapport d'erreur {#error_reporting_title}
 
-Error logging can be useful in finding the problem spots in your application, but it can also expose information about 
-the structure of your application to the outside world. To effectively protect your application from issues that could 
-be caused by the output of these messages, you need to configure your server differently in development versus 
-production (live).
+Tracer les erreurs est chose utile pour déceler les problèmes dans votre application, mais cela peut aussi exposer des informations sur la structure de votre application au reste du monde. C'est pourquoi, afin de protéger votre application des risques éventuels encourus par la publication de ces messages, vous devez configurer votre serveur différemment en développement et en production (live).
 
-### Development
+### Développement
 
-To show every possible error during <strong>development</strong>, configure the following settings in your `php.ini`:
+Pour montrer toutes les erreurs possibles pendant la phase de <strong>développement</strong>, configurez les paramètres suivants dans votre `php.ini`:
 
     display_errors = On
     display_startup_errors = On
     error_reporting = -1
     log_errors = On
 
-> Passing in the value `-1` will show every possible error, even when new levels and constants are added in future PHP versions. The `E_ALL` constant also behaves this way as of PHP 5.4. - [php.net](http://php.net/manual/function.error-reporting.php)
+> Fixer la valeur à `-1` montrera toutes les erreurs possibles, même si de nouveaux niveaux et de nouvelles constantes sont ajoutés dans des versions ultérieures de PHP. La constante `E_ALL` se comporte également de la même façon à partir de PHP 5.4. - [php.net](http://php.net/manual/fr/function.error-reporting.php)
 
-The `E_STRICT` error level constant was introduced in 5.3.0 and is not 
-part of `E_ALL`, however it became part of `E_ALL` in 5.4.0. What does this mean? 
-In terms of reporting every possible error in version 5.3 it means you must 
-use either `-1` or `E_ALL | E_STRICT`. 
+La constante de niveau d'erreur `E_STRICT` a été introduite en 5.3.0 et ne faisait pas alors partie intégrante de `E_ALL`, ce qu'elle est toutefois devenue en 5.4.0. Qu'est-ce à dire ? Cela signifie que dans la version 5.3 vous devez utiliser soit `-1` soit `E_ALL | E_STRICT` afin de rapporter toutes les erreurs possibles.
 
-**Reporting every possible error by PHP version**
+**Rapporter toutes les erreurs possibles en fonction de la version de PHP**
 
 * &lt; 5.3 `-1` or `E_ALL`
 * &nbsp; 5.3 `-1` or `E_ALL | E_STRICT`
@@ -33,15 +27,14 @@ use either `-1` or `E_ALL | E_STRICT`.
 
 ### Production
 
-To hide errors on your <strong>production</strong> environment, configure your `php.ini` as:
+Pour masquer les erreurs dans votre environnement de <strong>production</strong>, configurez votre `php.ini` comme suit :
 
     display_errors = Off
     display_startup_errors = Off
     error_reporting = E_ALL
     log_errors = On
 
-With these settings in production, errors will still be logged to the error logs for the web server, but will not be 
-shown to the user. For more information on these settings, see the PHP manual:
+Avec ces paramètres en production, les erreurs seront toujours enregistrées dans les fichiers d'erreurs du serveur web, mais elles ne seront plus exposées aux utilisateurs. Pour plus d'informations sur ces paramètres, consultez le manuel PHP :
 
 * [error_reporting](http://php.net/manual/errorfunc.configuration.php#ini.error-reporting)
 * [display_errors](http://php.net/manual/errorfunc.configuration.php#ini.display-errors)
