@@ -8,51 +8,37 @@ From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
 
 > Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes a failing automated test case that defines a desired improvement or new function, then produces code to pass that test and finally refactors the new code to acceptable standards. Kent Beck, who is credited with having developed or 'rediscovered' the technique, stated in 2003 that TDD encourages simple designs and inspires confidence
 
-There are several different types of testing that you can do for your application
+Il existe plusieurs types de test différents que vous pouvez rattacher à votre application.
 
-### Unit Testing
+### Test unitaire
 
-Unit Testing is a programming approach to ensure functions, classes and methods are working as
-expected, from the point you build them all the way through the development cycle. By checking
-values going in and out of various functions and methods, you can make sure the internal logic is
-working correctly. By using Dependency Injection and building "mock" classes and stubs you can verify that dependencies are correctly used for even better test coverage.
+Un test unitaire est une approche de la programmation pour s'assurer que les fonctions, les classes et les méthodes fonctionnent de la manière attendue, depuis leur implantation et tout au long du cycle de développement. En vérifiant les valeurs reçues et retournées par diverses fonctions et méthodes, vous pouvez ainsi garantir que la logique de fonctionnement interne reste correcte. En utilisant les injections de dépendance et en construisant des classes "mock" et des conteneurs (stubs), vous pouvez vérifier que les dépendances sont utilisées de façon appropriée pour une meilleure couverture de test.
 
-When you create a class or function you should create a unit test for each behavior it must have. At a very basic level you should
-make sure it errors if you send it bad arguments and make sure it works if you send it valid arguments.
-This will help ensure that when you make changes to this class or function later on in the development
-cycle that the old functionality continues to work as expected. The only alternative to this would be
-var_dump() in a test.php, which is no way to build an application - large or small.
+Quand vous créez une classe ou une fonction, vous devez créer un test unitaire pour chaque comportement qu'elle doit avoir. A un niveau très basique, vous devez vous assurer qu'elle renvoie une erreur si vous lui envoyez de mauvais arguments et qu'elle fonctionne correctement si les arguments sont valides. Cela aidera à garantir que, si vous faites ultérieurement des modifications à cette classe ou à cette fonction au cours du cycle de développement, la fonctionnalité initiale continuera de fonctionner comme attendu. La seule alternative à ce test serait un var_dump() dans un test.php, ce qui n'est en aucune façon une manière de construire une application - petite ou grande.
 
-The other use for unit tests is contributing to open source. If you can write a test that shows broken
-functionality (i.e. fails), then fix it, and show the test passing, patches are much more likely to be accepted. If
-you run a project which accepts pull requests then you should suggest this as a requirement.
+L'autre utilité des tests unitaires est de contribuer à l'open source. Si vous écrivez un test qui montre une fonctionnalité en panne (i.e. en échec), et si l'ayant réparée, le test affiche une réussite, vos correctifs auront plus de chance d'être acceptés. Si vous démarrez un projet qui acceptent des 'pull requests', vous devriez suggérer ce type de test comme une exigence.
 
-[PHPUnit](http://phpunit.de) is the de-facto testing framework for writing unit tests for PHP
-applications, but there are several alternatives
+[PHPUnit](http://phpunit.de) est le cadre de travail de facto pour écrire des test unitaires pour les applications PHP, mais il y a plusieurs alternatives :
 
 * [SimpleTest](http://simpletest.org)
 * [Enhance PHP](http://www.enhance-php.com/)
 * [PUnit](http://punit.smf.me.uk/)
 * [atoum](https://github.com/atoum/atoum)
 
-### Integration Testing
+### Test d'integration
 
 From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
 
 > Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in which individual software modules are combined and tested as a group. It occurs after unit testing and before validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
 
-Many of the same tools that can be used for unit testing can be used for integration testing as many
-of the same principles are used.
+Beaucoup d'outils utilisés pour les tests unitaires peuvent être également utilisés pour les tests d'intégration tant les principes à l'oeuvre sont très similaires.
 
-### Functional Testing
+### Test fonctionnel
 
-Sometimes also known as acceptance testing, functional testing consists of using tools to create automated
-tests that actually use your application instead of just verifying that individual units of code are behaving
-correctly and that individual units can speak to each other correctly. These tools typically work using real
-data and simulating actual users of the application.
+Parfois aussi appelé test d'acceptation, le test fonctionnel consiste à utiliser des outils pour réaliser des tests qui utilisent réellement votre application, plutôt que de vérifier uniquement que des unités individuelles de code se comportent correctement et que ces unités peuvent s'adresser les unes aux autres correctement. Ces outils fonctionne typiquement en utilisant de vraies données et en simulant le comportement réel des utilisateurs de l'application.
 
-#### Functional Testing Tools
+#### Outils de test fonctionnel
 
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)
-* [Codeception](http://codeception.com) is a full-stack testing framework that includes acceptance testing tools
+* [Codeception](http://codeception.com) est un cadre de test complet qui inclut des outils de test d'acceptation.
