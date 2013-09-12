@@ -2,12 +2,12 @@
 isChild: true
 ---
 
-## Complementary Testing Tools {#complementary_testing_tools_title}
+## Outils de test complémentaires {#complementary_testing_tools_title}
 
-Besides individual testing and behavior driven frameworks, there are also a number of generic frameworks and helper libraries useful for any preferred approach taken.
+Au-delà des cadres de travail pour les tests unitaires et le BDD, il existe un certin nombre de cadres de travail génériques et des bibliothèques d'aide utiles quelle que soit l'approche que vous avez privilégiée.
 
-### Tool Links
+### Liens concernant les outils
 
-* [Selenium](http://seleniumhq.org/) is a browser automation tool which can be [integrated with PHPUnit](http://www.phpunit.de/manual/3.1/en/selenium.html)
-* [Mockery](https://github.com/padraic/mockery) is a Mock Object Framework which can be integrated with [PHPUnit](http://phpunit.de/) or [PHPSpec](http://www.phpspec.net/)
-* [Prophecy](https://github.com/phpspec/prophecy) is a highly opinionated yet very powerful and flexible PHP object mocking framework. It's integrated with [PHPSpec](http://www.phpspec.net/) and can be used with [PHPUnit](http://phpunit.de/).
+* [Selenium](http://seleniumhq.org/) est un outil d'automatisation de la consultation par navigateurs qui peut être [intégré avec PHPUnit](http://www.phpunit.de/manual/3.1/en/selenium.html)
+* [Mockery](https://github.com/padraic/mockery) est un cadre de travail Mock Object qui peut être intégré avec [PHPUnit](http://phpunit.de/) ou [PHPSpec](http://www.phpspec.net/)
+* [Prophecy](https://github.com/phpspec/prophecy) est cadre de travail mock object pour PHP, particulièrement dogmatique et pourtant très puissant et flexible. Il est intégré [PHPSpec](http://www.phpspec.net/) et peut être utilisé avec [PHPUnit](http://phpunit.de/).
