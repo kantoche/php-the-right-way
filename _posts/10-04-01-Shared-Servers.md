@@ -2,6 +2,6 @@
 isChild: true
 ---
 
-## Shared Servers {#shared_servers_title}
+## Serveurs mutualisés {#shared_servers_title}
 
-PHP has shared servers to thank for its popularity. It is hard to find a host without PHP installed, but be sure it's the latest version. Shared servers allow you and other developers to deploy websites to a single machine. The upside to this is that it has become a cheap commodity. The downside is that you never know what kind of a ruckus your neighboring tenants are going to create; loading down the server or opening up security holes are the main concerns. If your project's budget can afford to avoid shared servers you should.
+PHP est redevable aux serveurs mutualisés de sa popularité. Il est difficile de trouver un hébergement qui ne propose pas PHP, mais il faut s'assurer qu'il s'agisse de la dernière version. Les serveurs mutualisés vous permettent ainsi qu'à d'autres développeurs de déployer des sites web sur une seule et même machine. Le bon côté des choses est que cela revient à une somme modique. Le revers de la médaille est que vous ne savez jamais de quelle sorte de mauvais tour votre voisinage est capable; mettre à genou le serveur ou ouvrir des failles de sécurité sont les principaux sujets d'inquiétude. Si le budget de votre projet permet de vous offrir autre chose qu'un serveur mutualisé, n'hésitez pas.
