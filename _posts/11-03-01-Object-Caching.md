@@ -2,32 +2,19 @@
 isChild: true
 ---
 
-## Object Caching {#object_caching_title}
+## Cache d'objet {#object_caching_title}
 
-There are times when it can be beneficial to cache individual objects in your code, such as with data that is expensive
-to get or database calls where the result is unlikely to change. You can use object caching software to hold these
-pieces of data in memory for extremely fast access later on. If you save these items to a data store after you retrieve
-them, then pull them directly from the cache for following requests, you can gain a significant improvement in
-performance as well as reduce the load on your database servers.
+Il y a des situations où il peut être bénéfique de mettre en cache des objets individuels dans votre code, tels que ceux dont les données sont coûteuses à obtenir ou les appels à la base de données dont il est peu probable que le résultat change. Vous pouvez utiliser un cache d'objet pour conserver ces données en mémoire pour un accès ultérieur très rapide. Si vous sauvegardez ces éléments dans un dépôt de données après extraction et que vous les récupérez directement à partir du cache lors des requêtes suivantes, vous pouvez tout à la fois améliorer vos gains de performance et réduire la charge de vos serveurs de base de données.
 
-Many of the popular bytecode caching solutions let you cache custom data as well, so there's even more reason to take
-advantage of them. APC, XCache, and WinCache all provide APIs to save data from your PHP code to their memory cache.
+Beaucoup de solutions de cache de bytecode vous laisse également mettre en cache des données personnalisées, donc une bonne raison supplémentaire d'en tirer avantage. APC, XCache et WinCache fournissent tout trois une API pour sauvegarder les données de votre code PHP dans leur cache en mémoire.
 
-The most commonly used memory object caching systems are APC and memcached. APC is an excellent choice for object
-caching, it includes a simple API for adding your own data to its memory cache and is very easy to setup and use. The
-one real limitation of APC is that it is tied to the server it's installed on. Memcached on the other hand is installed
-as a separate service and can be accessed across the network, meaning that you can store objects in a hyper-fast data
-store in a central location and many different systems can pull from it.
+Les systèmes de cache d'objet les plus communément employés sont APC et memcached. APC est un excellent choix pour la mise en cache d'objet, il inclut une API pour l'ajout de vos propres données à son cache en mémoire et il est d'une grande facilité à installer et à utiliser. La seule vraie limitation d'APC est qu'il est lié au serveur sur lequel il est installé. Memcached est à l'inverse installé comme un service séparé et peut être accédé depuis le réseau, ce qui signifie que vous pouvez stocker des objets dans un dépôt de données ultra-rapide et centralisé dans lequel de nombreux systèmes différents peuvent venir puiser.
 
-Note that when running PHP as a (Fast-)CGI application inside your webserver, every PHP process will have its own
-cache, i.e. APC data is not shared between your worker processes. In these cases, you might want to consider using
-memcached instead, as it's not tied to the PHP processes.
+Notez que lorsque vous lancez PHP comme une application (Fast-)CGI sur votre serveur web, chaque processus PHP aura son propre cache, c'est-à-dire que les données APC ne sont pas partagées entre vos processus actifs. Dans ce cas, vous pourriez vouloir envisager à la place l'utilisation de memcached, puisqu'il n'est pas lié aux processus PHP.
 
-In a networked configuration APC will usually outperform memcached in terms of access speed, but memcached will be able
-to scale up faster and further. If you do not expect to have multiple servers running your application, or do not need
-the extra features that memcached offers then APC is probably your best choice for object caching.
+Dans une configuration en réseau, APC dépassera généralement memcached en terme de rapidité d'accès, mais memcached sera capable d'augmenter plus rapidement et davantage. Si vous ne prévoyez pas de faire tourner votre application sur de multiples serveurs, ou si vous n'avez pas besoin des fonctionnalités supplémentaires qu'offre memcached, alors APC est probablement votre meilleure option pour la mise en cache d'objet.
 
-Example logic using APC:
+Exemple d'utilisation d'APC :
 
 {% highlight php %}
 <?php
@@ -41,7 +28,7 @@ if ($data === false) {
 print_r($data);
 {% endhighlight %}
 
-Learn more about popular object caching systems:
+En savoir plus sur les systèmes de cache d'objet les plus populaires :
 
 * [APC Functions](http://php.net/manual/en/ref.apc.php)
 * [Memcached](http://memcached.org/)
