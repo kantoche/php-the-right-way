@@ -2,22 +2,20 @@
 isChild: true
 ---
 
-## Frameworks {#frameworks_title}
+## Cadres de travail {#frameworks_title}
 
-Rather than re-invent the wheel, many PHP developers use frameworks to build out web applications. Frameworks abstract away many of the low-level concerns and provide helpful, easy-to-use interfaces to complete common tasks.
+Plutôt que de réinventer la roue, de nombreux développeurs PHP utilisent des cadres de travail pour réaliser des applications web. Les cadres de travail gèrent de manière transparente beaucoup de difficultés de bas niveau et fournissent des interfaces utiles et maniables pour réaliser des tâches courantes.
 
-You do not need to use a framework for every project. Sometimes plain PHP is the right way to go, but if you do need a framework then there are three main types available:
+Vous n'avez pas besoin d'utiliser un cadre de travail pour chaque projet. Parfois coder directement en PHP suffit, mais si vous devez recourir à un cadre de travail, sachez qu'il y en a trois types disponibles :
 
-* Micro Frameworks
-* Full-Stack Frameworks
-* Component Frameworks
+* Micro cadres de travail
+* Cadres de travail complet
+* Cadres de travail de composants
 
-Micro-frameworks are essentially a  wrapper to route a HTTP request to a callback, controller, method, etc as quickly as possible, and sometimes come with a few extra libraries to assist development such as basic database wrappers and the like. They are prominently used 
-to build remote HTTP services.
+Les micro cadres de travail constituent essentiellement un conteneur pour aiguiller aussi vite que possible une requête HTTP vers une fonction de rappel, un contrôleur, une méthode, etc... Ils s'accompagnent parfois de bibliothèques supplémentaires pour aider le développement tels que des conteneurs basiques de base de données et ainsi de suite. Ils sont utilisés avant tout pour réaliser des services HTTP distants.
 
-Many frameworks add a considerable number of features on top of what is available in a micro-framework and these are known Full-Stack 
-Frameworks. These often come bundled with ORMs, Authentication packages, etc.
+Beaucoup de cadres de travail ajoutent un nombre considérable de fonctionnalités en plus de ce qui est disponible avec les micro cadres de travail et sont considérés alors comme des cadres de travail complets. Ils sont souvent couplés avec des ORM, des paquetages d'authentification, etc.
 
-Component-based frameworks are collections of specialized and single-purpose libraries. Disparate component-based frameworks can be used together to make a micro- or full-stack framework.
+Les cadres de travail de composants sont une collection de bibliothèques spécialisées et dédiées. Des cadres de travail de composants disparates peuvent être assemblés pour réaliser un cadre de travail micro ou complet.
 
-* [Popular PHP Frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)
+* [Cadres de travail PHP populaires](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)
