@@ -2,20 +2,16 @@
 isChild: true
 ---
 
-## Components {#components_title}
+## Composants {#components_title}
 
-As mentioned above "Components" are another approach to the common goal of creating, distributing and implementing shared code. Various 
-component repositories exist, the main two of which are:
+Comme mentionné plus haut, les "composants" sont une autre façon de poursuivre l'objectif de créer, de distribuer et d'intégrer du code partagé. Il existe divers dépôts de composants, les deux principaux étant :
 
 * [Packagist](/#composer_and_packagist)
 * [PEAR](/#pear)
 
-Both of these repositories have command line tools associated with them to help the installation and upgrade processes, and have been 
-explained in more detail in the [Dependency Management][dm] section.
+Chacun de ces deux dépôts dispose d'outils de ligne de commande associés pour aider aux opérations d'installation et de mise à jour, ce qui a été expliqué plus en détail dans la section [Dependency Management][dm].
 
-There are also component-based frameworks, which allow you to use their components with minimal (or no) requirements. For example, you 
-can use the [FuelPHP Validation package][fuelval], without needing to use the FuelPHP framework itself. These projects are essentially 
-just another repository for reusable components:
+Il y a aussi des cadres de travail de composants qui vous permettent d'utiliser leur composants avec peu (ou pas) de conditions préalables. Par exemple, vous pouvez utiliser le [paquetage Validation de FuelPHP][fuelval], sans avoir besoin d'utiliser le cadre de travail FuelPHP lui-même. Ces projets ne constituent essentiellement que d'autres dépôts de composants réutilisables :
 
   [dm]: /#dependency_management
   [fuelval]: https://github.com/fuelphp/validation
