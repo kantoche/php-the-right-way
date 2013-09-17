@@ -1,20 +1,20 @@
-# Community {#community_title}
+# Communauté {#community_title}
 
-The PHP community is as diverse as it is large, and its members are ready and willing to support new PHP programmers. Consider joining your local PHP user group (PUG) or attending larger PHP conferences to learn more about the best practices shown here. You can hang out on IRC in the #phpc channel on [irc.freenode.com][php-irc] and follow the [@phpc][phpc-twitter] twitter account. Get out there, meet new developers, learn new topics, and above all, make new friends! Other community resources include the Google+ PHP [Programmer community][php-programmers-gplus] and [StackOverflow][php-so].
+La communauté PHP est aussi diverse qu'étendue, et ses membres sont disposés et volontaires pour assister les nouveaux programmeurs PHP. Pensez à rejoindre votre groupe d'utilisateurs PHP local (PUG) ou à assister aux grandes conférences PHP pour en apprendre plus au sujet des bonnes pratiques exposées ici. Vous pouvez trainer sur le canal IRC #phpc de [irc.freenode.com][php-irc] et suivre le compte twitter [@phpc][phpc-twitter]. Sortez, rencontrez de nouveaux développeurs, apprenez de nouveaux sujets, et par-dessus tout, faites-vous de nouveaux amis ! D'autres ressources communautaires incluent la [communauté des programmeurs][php-programmers-gplus] PHP de Google+ et [StackOverflow][php-so].
 
-[Read the Official PHP Events Calendar][php-calendar]
+[Consultez le calendrier des événements officiels PHP][php-calendar]
 
-## PHP User Groups
+## Groupes d'utilisateurs PHP
 
-If you live in a larger city, odds are there's a PHP user group nearby. Although there's not yet an official list of PUGs, you can easily find your local PUG by searching on [Google][google] or [Meetup.com][meetup]. If you live in a smaller town, there may not be a local PUG; if that's the case, start one!
+Si vous vivez dans une grande ville, il y a fort à parier qu'il y a un groupe d'utilisateurs PHP à proximité. Bien qu'il n'existe pas encore une liste officielle des PUGs, vous pouvez facilement trouver votre PUG local en cherchant sur [Google][google] ou [Meetup.com][meetup]. Si vous vivez dans une plus petite ville, il se peut que n'existe pas de PUG; dans ce cas, mettez-le en place !
 
-[Read about User Groups on the PHP Wiki][php-wiki]
+[A propos des groupes d'utilisateurs sur le Wiki PHP][php-wiki]
 
-## PHP Conferences
+## Conférences PHP
 
-The PHP community also hosts larger regional and national conferences in many countries around the world. Well-known members of the PHP community usually speak at these larger events, so it's a great opportunity to learn directly from industry leaders.
+La communauté PHP organise également de grandes conférences régionales et nationales dans de nombreux pays autour du monde. Les membres bien connus de la communauté PHP ont l'habitude d'intervenir lors de ces grands événenements, et c'est donc une belle opportunité que d'apprendre au contact direct des leaders de cette industrie.
 
-[Find a PHP Conference][php-conf]
+[Trouver une conférence PHP][php-conf]
 
 [php-calendar]: http://www.php.net/cal.php
 [google]: https://www.google.com/search?q=php+user+group+near+me
