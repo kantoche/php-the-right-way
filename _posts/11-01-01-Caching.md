@@ -1,4 +1,4 @@
-# Caching {#caching_title}
+# Mise en cache {#caching_title}
 
-PHP is pretty quick by itself, but bottlenecks can arise when you make remote connections, load files, etc. 
-Thankfully, there are various tools available to speed up certain parts of your application, or reduce the number of times these various time-consuming tasks need to run.
+PHP est plutôt rapide de lui-même, mais il peut se produire des ralentissements lorsque vous faites des connexions distantes, des chargements de fichiers, etc. 
+Heureusement, il y a divers outils disponibles pour accélerer certaines parties de votre application, ou réduire la fréquence à laquelle diverses tâches chronophages s'exécutent.
