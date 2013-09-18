@@ -1,1 +1,1 @@
-# Language Highlights {#language_highlights_title}
+# Points forts du langage {#language_highlights_title}
