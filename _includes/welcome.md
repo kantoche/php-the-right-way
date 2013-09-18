@@ -7,15 +7,15 @@ On trouve beaucoup d'informations qui ne sont plus à jour sur le web et qui ég
 _PHP: The Right Way_ est (ou sera bientôt) traduit dans différentes langues :
 
 * [Anglais](http://www.phptherightway.com)
-* Catalan (Link broken... we're looking into it)
+* Catalan (Lien brisé... En dépannage)
 * [Chinois](http://wulijun.github.com/php-the-right-way)
 * [Japonais](http://ja.phptherightway.com)
 * [Coréen](http://wafe.github.io/php-the-right-way/)
-* Italien (Link broken... we're looking into it)
+* Italien (Lien brisé... En dépannage)
 * [Polonais](http://pl.phptherightway.com/)
 * [Portugais](http://br.phptherightway.com/)
 * [Russe](http://getjump.github.io/ru-php-the-right-way)
-* Espagnol (Link broken... we're looking into it)
+* Espagnol (Lien brisé... En dépannage)
 * [Ukrainien](http://iflista.github.com/php-the-right-way/)
 * [Bulgare](http://bg.phptherightway.com/)
 * [Allemand](http://rwetzlmayr.github.io/php-the-right-way/)
