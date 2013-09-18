@@ -1,5 +1,5 @@
 ---
-title: Databases
+title: Bases de données
 ---
 
 # Bases de données {#databases_title}
