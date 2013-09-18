@@ -1,5 +1,5 @@
 ---
-title:   Standard PHP Library
+title:   Bibliothèque standard PHP
 isChild: true
 ---
 
