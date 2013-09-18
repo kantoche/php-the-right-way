@@ -1,2 +1,2 @@
-# Getting Started {#getting_started_title}
+# Prise en main {#getting_started_title}
 
